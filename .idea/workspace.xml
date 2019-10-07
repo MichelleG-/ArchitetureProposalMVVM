@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectFrameBounds">
+    <option name="x" value="25" />
+    <option name="y" value="23" />
+    <option name="width" value="1245" />
+    <option name="height" value="697" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="android.sdk.path" value="/Volumes/STORAGE" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="not.eligible.for.single.variant.sync" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+</project>
