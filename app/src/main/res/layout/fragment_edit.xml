@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="editFragmentViewModel"
+            type="com.architeture.proprosal.presentation.view.model.EditFragmentViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_product_name_to_edit"
+            android:text="@string/nome_do_producto"
+            app:layout_constraintTop_toTopOf="@id/edt_product_name"
+            app:layout_constraintBottom_toBottomOf="@id/edt_product_name"
+            app:layout_constraintRight_toLeftOf="@id/edt_product_name"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_margin="16dp"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_product_name"
+            android:layout_width="0dp"
+            android:text="@={editFragmentViewModel.productName}"
+            android:layout_margin="16dp"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/txt_product_name_to_edit"
+            android:layout_height="wrap_content"
+            android:inputType="text|textCapWords"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_product_value_to_edit"
+            android:text="@string/valor_do_producto"
+            app:layout_constraintTop_toTopOf="@id/edt_product_value"
+            app:layout_constraintBottom_toBottomOf="@id/edt_product_value"
+            app:layout_constraintRight_toLeftOf="@id/edt_product_value"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_margin="16dp"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_product_value"
+            android:layout_width="0dp"
+            android:layout_margin="16dp"
+            app:layout_constraintHorizontal_bias="0"
+            android:text="@={editFragmentViewModel.productValue}"
+            app:layout_constraintTop_toBottomOf="@id/txt_product_name_to_edit"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            android:inputType="numberDecimal"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/txt_product_value_to_edit"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_finish"
+            android:layout_width="wrap_content"
+            android:text="@string/pronto"
+            app:layout_constraintTop_toBottomOf="@id/edt_product_value"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="1"
+            app:layout_constraintHorizontal_bias="1"
+            android:layout_margin="16dp"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

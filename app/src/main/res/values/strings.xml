@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ArchitetureProposalMVVM</string>
+    <string name="error_unespliqued">Erro inesperado</string>
+    <string name="attention">Atenção</string>
+    <string name="unexpected_error">Ops… Ocorreu um erro inesperado.\nTente novamente mais tarde.</string>
+    <string name="ok">OK</string>
+    <string name="ssession_error">Sessão expirada.\nFaça login novamente para entrar no app.</string>
+    <string name="add">Add</string>
+    <string name="nome_do_producto">Nome do Producto</string>
+    <string name="valor_do_producto">Valor do producto</string>
+    <string name="pronto">Pronto</string>
+</resources>

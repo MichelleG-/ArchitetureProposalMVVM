@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/main_navigation"
+            app:startDestination="@id/mainFragment"
+    >
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.architeture.proprosal.presentation.fragment.MainFragment"
+        tools:layout="@layout/fragment_main"
+        android:label="MainFragment">
+        <action
+            android:id="@+id/action_mainFragment_to_editFragment"
+            app:destination="@id/editFragment"
+            app:launchSingleTop="true"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.architeture.proprosal.presentation.fragment.EditFragment"
+        tools:layout="@layout/fragment_edit"
+        android:label="EditFragment" >
+        <argument
+            android:name="product"
+            app:argType="com.architeture.proprosal.presentation.view.model.persistence.ProductViewModel"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_editFragment_to_mainFragment"
+            app:popUpTo="@+id/mainFragment"
+            />
+    </fragment>
+</navigation>
